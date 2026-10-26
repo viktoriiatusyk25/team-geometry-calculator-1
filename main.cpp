@@ -27,18 +27,12 @@ int main()
         cin >> Rate;
         cout << "Результат конвертації валюти: " << Currency * Rate << endl;
     }
-int UserNumber;
-do
-{
-    cin >> UserNumber;
-if (UserNumber < RandomNumber)
-    cout << "Загадане число більше!" << endl;
-else if (UserNumber > RandomNumber)
-    cout << "Загадане число менше!" << endl;
-else
-    cout << "Ви вгадали число! Це було число " << RandomNumber << endl;     
-} 
-while (UserNumber != RandomNumber);
+ else if (Choice == 2)
+    {
+        cout << "Введіть метри: ";
+        cin >> Meters;
+        cout << "Результат: " << Meters << " метрів = " << Meters * 3.28084 << " футів" << endl;
+    }
  else if (Choice == 3)
     {
         cout << "Введіть градуси Цельсія: ";
