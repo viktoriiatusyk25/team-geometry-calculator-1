@@ -1,15 +1,32 @@
 #include <iostream>
 #include <Windows.h>
-#include <random>
 using namespace std;
 int main()
-{ SetConsoleCP(1251);
-SetConsoleOutputCP(1251);
-srand(time(NULL));
-int RandomNumber;
-cout << "гра вгадай число" << endl;
-RandomNumber = rand() % 20;
-cout << "Введіть число від 0 до 19: ";
+{
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+    int Choice;
+    cout << "Калькулятор одиниць" << endl;
+    cout << "1. Конвертація валют" << endl;
+    cout << "2. Метри у фути" << endl;
+    cout << "3. Цельсій у Фаренгейт" << endl;
+    cout << "Виберіть дію: ";
+    cin >> Choice;
+
+    double Currency;
+    double Meters;
+    double Celsius;
+    double Rate;
+
+
+    if (Choice == 1)
+    {
+        cout << "Введіть суму валюти: ";
+        cin >> Currency;
+        cout << "Введіть курс валюти: ";
+        cin >> Rate;
+        cout << "Результат конвертації валюти: " << Currency * Rate << endl;
+    }
 int UserNumber;
 do
 {
@@ -22,9 +39,13 @@ else
     cout << "Ви вгадали число! Це було число " << RandomNumber << endl;     
 } 
 while (UserNumber != RandomNumber);
-// ===== Студент 3: коло =====
-
-// ===== Студент 4: головне меню =====
-int main() {
+ else if (Choice == 3)
+    {
+        cout << "Введіть градуси Цельсія: ";
+        cin >> Celsius;
+        cout << "Результат: " << Celsius << " градусів Цельсія = " << Celsius * 9 / 5 + 32 << " градусів Фаренгейта" << endl;
+    }
+    else
+        cout << "Неправильний вибір!" << endl;
     return 0;
 }
