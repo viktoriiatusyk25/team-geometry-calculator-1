@@ -42,4 +42,5 @@ int main()
     else
         cout << "Неправильний вибір!" << endl;
     return 0;
+    
 }
